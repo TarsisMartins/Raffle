@@ -10,7 +10,7 @@ This is where my scripts come in.
 
 **To Run The Code**
 
-You will need to download the .xlsx Macro sheet and the sample breakout. Unfortunately, I cannot provide a sample of the raw list of raffle entries without compromising the safety of our customers, so you will have to construct one. This particular raffle had about 600 entrants, which is considered a low number. Our most popular raffles will have upwards of 10,000 entries, not counting duplicates.
+You will need to download the .xlsx Macro sheet and the sample breakout. A breakout is a table that details how many pairs of shoes of each size go too each store. Unfortunately, I cannot provide a sample of the raw list of raffle entries without compromising the safety of our customers, so you will have to construct one. This particular raffle had about 600 entrants, which is considered a low number. Our most popular raffles will have upwards of 10,000 entries, not counting duplicates.
 
 Once everything is downloaded and you have constructed a sample winner's list, It is time to fill in the information in the Macro sheet.
 
