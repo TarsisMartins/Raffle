@@ -15,14 +15,19 @@ You will need to download the .xlsx Macro sheet and the sample breakout. A break
 Once everything is downloaded and you have constructed a sample winner's list, It is time to fill in the information in the Macro sheet.
 
 1) All relevant files should be in the same folder, which you will want to list in the Directory cell, C2. Make sure to end with a \ or the script will not be able to find your file. The Macro itself does not need to be in this folder, but my coworkers have found this helps them organize.
-2) Put the name of the breakout file, including file extension, into any cell in the range C4 to C9. There are multiple spaces so that multiple size runs can be processed at the same time.
+2) Put the name of the breakout file, including file extension, into the labeled cell.
 3) Press "Create Template". This will create a new workbook, with one sheet for each store that is receiving the shoes. Each store's sheet will have one line per pair of shoes it receives, with the size listed. Save the template.
-4) Place the name of the template, including file extension, in the range G4 to G9. Place the name of your sample entrants into the range E4 to E9. Click the "Fill in Winners" button. This will take names from the entrants list and copy them into the template.
-5) Please do not click the "Email Winners" button. It does not work yet.
+4) Place the name of the template, including file extension, in the range G4 to G9. Place the name of your sample entrants into the range E4 to E9. Click the "Fill in Winners" button. This will take names from the entrants list and copy them into the template. It will also create a list to be uploaded to a service such as Constant Contact.
 
 **A Note on the "Fill in Winners" Algorithm**
 
 I wondered, at first, whether to loop through each blank line on the template or the entrants list. Our biggest raffles so far have had up to 10,000 entrants and up to 4,000 pairs of shoes. If you loop through the shoes, your worst-case scenario is 4,000 x 10,000 = 40,000,000 steps. However, looping through the winner's list means you only have to search the one store that the entrant wanted to pickup shoes from. With roughly 30 stores, this comes to an average of 133 shoes per store. 10,000 x 133 = 1,330,000. This is why I chose to loop through the entrants list and not the stores, even though there are more entrants than shoes.
+
+**A Note on the "Create Template" Algorithm**
+
+Our breakouts are produced from a database software. They are differently spaced every time. In order to accomodate this, I taught the computer to scan the page from the upper left hand corner outward, as a human eye would do, for the word "STORE", which determines where the rest of the required data is.
+
+The algorithm searches the right and bottom edge of a slightly bigger square on each loop, up to 20x20.
 
 **Code Sources**
 
